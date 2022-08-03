@@ -15,9 +15,9 @@ communicate with the given mock backend.
 
 The project you will be building is an app for voting for the cutest animal. Use this gif as an example of how the app should work. 
 
-![]()
+![demo](assets/demo.gif)
 
-> Your styling does not have to match what is shown in the above example to pass. Feel free to add your own style! 
+> Your styling does not have to match what is shown in the above example. Feel free to add your own style! 
 
 ## Core Deliverables
 
@@ -28,10 +28,10 @@ For this project, those requirements are listed below as user stories:
 **As a user, I can:** 
 
 1. See each animal's name in a navigation bar. 
-2. Click on each animal's name to display their details and photo. 
+2. Click on each animal's name to display their vote count and photo. 
 3. Click on a "Vote" button for a specific animal and immediately see their vote count increase. 
-  - It should _not_ affect the amount of votes any other animal has. 
-  - For MVP, the update vote count does _not_ need to persist once you refresh or navigate away from that animal.
+    - It should _not_ affect the amount of votes any other animal has. 
+    - For MVP, the update vote count does _not_ need to persist once you refresh or navigate away from that animal.
 
 ## Setup 
 
@@ -52,16 +52,14 @@ The HTML file includes the boilerplate and links to both the CSS and JavaScript 
 We've also provided you with the mock database to work with. To get it started, use `json-server` by running the following command: 
 
 ```sh
-json-server --watch db.json` 
+json-server --watch db.json
 ``` 
 
 Test your server by visiting this route in the browser: 
 
 [http://localhost:3000/animals](http://localhost:3000/animals)
 
-Once that's up and running, you're good to start coding! Note that the base URL for your API will be [http://localhost:3000](http://localhost:3000)
-
----
+Once that's up and running, you're good to start coding! Note that the base URL for your API will be [http://localhost:3000](http://localhost:3000). 
 
 ## Bonus Deliverables 
 
