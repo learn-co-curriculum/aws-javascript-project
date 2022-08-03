@@ -1,0 +1,34 @@
+{
+    "animals": [
+      {
+        "id": 1,
+        "name": "Dr. Stare",
+        "image": "https://thumbs.gfycat.com/VeneratedPointedGuppy-size_restricted.gif",
+        "votes": 1
+      },
+      {
+        "id": 2,
+        "name": "Baker",
+        "image": "https://thumbs.gfycat.com/VelvetySlushyGermanshepherd-size_restricted.gif",
+        "votes": 2
+      },
+      {
+        "id": 3,
+        "name": "Nibbles",
+        "image": "https://thumbs.gfycat.com/HeavenlyKeenAmericanratsnake-size_restricted.gif",
+        "votes": 3
+      },
+      {
+        "id": 4,
+        "name": "Ludwig van Spikes",
+        "image": "https://thumbs.gfycat.com/LegalFineGuineafowl-size_restricted.gif",
+        "votes": 4
+      },
+      {
+        "id": 5,
+        "name": "Party Parrot",
+        "image": "https://thumbs.gfycat.com/ForcefulDependableAmericanbobtail-size_restricted.gif",
+        "votes": 5
+      }
+    ]
+  }
