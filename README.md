@@ -64,7 +64,7 @@ communicate with the given mock backend.
 
 The project you will be building is an app for voting for the cutest animal. Use this gif as an example of how the app should work. 
 
-![demo](assets/demo.gif)
+![GIF demo of the project](https://curriculum-content.s3.amazonaws.com/aws-mod-1/javascript-project/cutespace-demo.gif)
 
 > Your styling does not have to match what is shown in the above example. Feel free to add your own style! 
 
