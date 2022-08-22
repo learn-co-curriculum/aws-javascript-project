@@ -1,11 +1,60 @@
-# JavaScript Mini Project Guidelines
+# JavaScript Project Guidelines
+
+## Learning Goals
+
+- Design and architect features across a frontend
+- Integrate JavaScript and an external API
+- Debug issues in small- to medium-sized projects
+- Build and iterate on a project MVP
 
 ## Introduction
 
-Welcome to the JavaScript Mini Project!
+Welcome to the JavaScript Project!
 
 You’ve worked so hard to get here and have learned a ton. Now it's time to bring
-it all together on your own!
+it all together!
+
+For this project, you're going build a Single Page Application (**SPA**).
+Building this application will be challenging because it will integrate
+everything you've learned up to this point. Your frontend will be built with
+HTML, CSS, and JavaScript and will communicate with a `json-server` mock backend.
+
+### Project Requirements
+
+1. Your app must be a HTML/CSS/JS frontend that accesses data from a mock backend 
+   served with `json-server`. All interactions between the client and the backend 
+   should be handled asynchronously and use JSON as the communication format. 
+
+2. Your entire app must run on a single page. There should be NO redirects. In
+   other words, your project will contain a single HTML file.
+
+3. Use at least 1 unique [event-listener][] that enables interactivity. Think
+   search or filter functionality, toggling dark/light mode, upvoting posts,
+   etc.
+
+4. Your project must implement at least one instance of array iteration using
+   available array methods (`map`, `forEach`, `filter`, etc). Manipulating your
+   backend data in some way should present an opportunity to implement your array
+   iteration.
+
+5. Follow good coding practices. Keep your code DRY (Do not repeat yourself) by
+   utilizing functions to abstract repetitive code.
+
+### Stretch Goals
+
+If you achieve MVP early on and would like to give yourself a challenge, consider 
+adding a stretch goal. Remember you only have a few hours to work on this project 
+and be sure you have a completed MVP before attempting the following.
+
+1. Use a free public API in your project. If you choose to do so, we recommend avoiding
+API's that require a key or any sort of authorization. For ideas, see this [list of no-auth APIs](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/). If you would 
+still like to use an API that requires a key, please consult with your instructor on how to 
+protect that key. **NEVER push your API key to github!**
+
+
+## Strategy and Tips
+
+### Planning
 
 For this project, you will be given a local API served with `json-server` to build 
 a frontend for. Your frontend should be built with HTML, CSS, and JavaScript and will
@@ -71,3 +120,10 @@ The following deliverables are **not** required as part of this project's MVP an
   - **Extra challenge:** Add a "Reset" button to reset _all_ animal's votes to 0. 
 1. Click on a "Vote" button for a specific animal and have the updated vote count persist.
   - **Hint:** You will need to make a `PATCH` request to `/animals/:id`
+
+## Resources
+
+- [json-server][]
+
+[json-server]: https://www.npmjs.com/package/json-server
+[event-listeners]: https://developer.mozilla.org/en-US/docs/Web/Events
