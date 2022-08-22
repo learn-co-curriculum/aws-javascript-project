@@ -56,118 +56,70 @@ protect that key. **NEVER push your API key to github!**
 
 ### Planning
 
-- Plan out your features
-- Develop user stories
-  - “As [ a user ], I want [ to perform this action ] so that
-    [ I can accomplish this goal ].”
-  - Features should not need you there to explain them to users
-- Plan out the structure of your JSON requests
+For this project, you will be given a local API served with `json-server` to build 
+a frontend for. Your frontend should be built with HTML, CSS, and JavaScript and will
+communicate with the given mock backend.
 
-### Project Pitches
+## CuteSpace
 
-Before you start working on your project, you'll pitch your project idea to your
-instructors for approval and feedback.
+The project you will be building is an app for voting for the cutest animal. Use this gif as an example of how the app should work. 
 
-For your project pitch, you should include:
+![demo](assets/demo.gif)
 
-- The basic story of your application
-- The core features of your MVP
-- The API data you'll be using and how you'll use it
-- Challenges you expect to face
-- How you are meeting the requirements of the project
+> Your styling does not have to match what is shown in the above example. Feel free to add your own style! 
 
-Feel free to send this pitch to your instructor via slack asynchronously.
+## Core Deliverables
 
-### MVP ASAP
+When it comes to developing projects, a key concept to have in mind is the "Minimum Viable Product", or MVP for short. You should aim to meet the MVP requirements first. Doing so keeps your focus on completing a functional project first and foremost, avoiding any potential time loss on extraneous work. 
 
-- Build a Minimum Viable Product (MVP) as quickly as possible.
-  - Pick an API and explore it early on to ensure it will work for your need
+For this project, those requirements are listed below as user stories: 
 
-### Instructor Guidance
+**As a user, I can:** 
 
-You should strive to solve problems independently, but you also shouldn't waste
-your time stuck on a problem. A good guideline for a small bug is the rule of
-10s:
+1. See each animal's name in a navigation bar. 
+2. Click on each animal's name to display their vote count and photo. 
+3. Click on a "Vote" button for a specific animal and immediately see their vote count increase. 
+    - It should _not_ affect the amount of votes any other animal has. 
+    - For MVP, the update vote count does _not_ need to persist once you refresh or navigate away from that animal.
 
-- 10 minutes debugging the code
-- 10 minutes using Google and StackOverflow to try to find an answer
-- 10 minutes asking your fellow students for help
-- Asking an instructor
+## Setup 
 
-If you seek out instructor guidance on your design from the start, they might
-help steer you into design and architectural decisions that will help you down
-the road. That will also give the instructors context for what your app is
-supposed to do, so you won't need to explain everything to them when asking for
-help debugging.
+To allow you to focus on writing code, we've provided you with some starter code and all the files you will need. Fork and clone down the attached repository to get started.
 
-### Guidelines for Staying Organized
+### The Files 
 
-**Write down** the decisions you make about your project. This will not only
-help you think more clearly, it will also help you communicate your project to
-instructors when asking for help. In addition to writing everything down, we
-also recommend the following to help stay organized and on track:
+The three files you should be working in are:
 
-- Describe/sketch your ideas (use diagrams!).
-- Start by creating a frontend directory with the basic files you'll need
-- Next, build enough code to get some API data to work with. Don't worry about
-  building all of your async code yet, just get to the point where you can
-  access one endpoint on an API, then start working on getting that data
-  displayed.
-- Then, continue to build additional async code and frontend features.
-- Continue building features one by one.
+1. `index.html` 
+2. `style.css` 
+3. `src/index.js` 
 
-Check in with your instructors to make sure your scope and timeline are
-manageable.
+The HTML file includes the boilerplate and links to both the CSS and JavaScript files. 
 
-### JSON Server Instructions
+### The Mock Backend 
 
-You can use this [json-server template][] to generate your backend code. Using
-this template will make it easier to deploy your backend later on.
+We've also provided you with the mock database to work with. To get it started, use `json-server` by running the following command: 
 
-[json-server template]: https://github.com/learn-co-curriculum/json-server-template
+```sh
+json-server --watch db.json
+``` 
 
-If you prefer, instead of using the template, you can create a `db.json` file
-with a structure in the root of your project that looks like this:
+Test your server by visiting this route in the browser: 
 
-```json
-{
-  "toys": [
-    {
-      "id": 1,
-      "name": "Woody",
-      "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 8
-    },
-    {
-      "id": 2,
-      "name": "Buzz Lightyear",
-      "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 14
-    }
-  ]
-}
-```
+[http://localhost:3000/animals](http://localhost:3000/animals)
 
-Then, assuming you have `json-server` installed globally, you can run this
-command to run the server:
+Once that's up and running, you're good to start coding! Note that the base URL for your API will be [http://localhost:3000](http://localhost:3000). 
 
-```console
-$ json-server --watch db.json
-```
+## Bonus Deliverables 
 
-Whatever top-level keys exist in your `db.json` file will determine the routes
-available. In the example above, since we have a key of `toys` pointing to an
-array of toy objects, `json-server` will generate the following routes:
+The following deliverables are **not** required as part of this project's MVP and will **not** negatively affect your score if you do not attempt them. These are only here if you finish MVP early and want an extra challenge. Make sure you commit your work to save your progress before attempting the bonus deliverables!
 
-- `GET /toys`
-- `POST /toys`
-- `GET /toys/:id`
-- `PATCH /toys/:id`
-- `DELETE /toys/:id`
+**As a user, I can:** 
 
-You can consult the [json-server docs][] for more information.
-
-[json-server docs]: https://www.npmjs.com/package/json-server
+1. Click on a "Reset" button for a specific animal to reset their votes to 0. 
+  - **Extra challenge:** Add a "Reset" button to reset _all_ animal's votes to 0. 
+1. Click on a "Vote" button for a specific animal and have the updated vote count persist.
+  - **Hint:** You will need to make a `PATCH` request to `/animals/:id`
 
 ## Resources
 
@@ -175,4 +127,3 @@ You can consult the [json-server docs][] for more information.
 
 [json-server]: https://www.npmjs.com/package/json-server
 [event-listeners]: https://developer.mozilla.org/en-US/docs/Web/Events
-[APIs]:  https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/
